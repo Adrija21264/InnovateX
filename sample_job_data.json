@@ -1,0 +1,57 @@
+{
+  "sample_job_execution_data": {
+    "description": "Mock historical job execution data for cold start prediction demo",
+    "total_records": 1229,
+    "data_schema": {
+      "job_id": "Unique identifier for the job",
+      "timestamp": "ISO datetime when job executed",
+      "duration_ms": "Job execution time in milliseconds",
+      "retries": "Number of retry attempts",
+      "status": "Execution status: success, failed, timeout",
+      "compute_time_sec": "Total compute time including retries",
+      "job_type": "Type: cron, on_demand, bursty"
+    },
+    "job_types": {
+      "cron": {
+        "count": 1029,
+        "description": "Regular scheduled jobs with predictable intervals",
+        "examples": ["backup_daily", "cleanup_logs", "health_check"]
+      },
+      "on_demand": {
+        "count": 61,
+        "description": "User-triggered jobs with irregular patterns",
+        "examples": ["user_report", "data_export"]
+      },
+      "bursty": {
+        "count": 139,
+        "description": "AI/video processing jobs that run in clusters",
+        "examples": ["ai_video_process", "ml_training", "image_analysis"]
+      }
+    },
+    "date_range": {
+      "start": "2025-08-10T00:00:00",
+      "end": "2025-08-17T10:30:00",
+      "duration_days": 7
+    },
+    "sample_records": [
+      {
+        "job_id": "backup_daily",
+        "timestamp": "2025-08-16T00:00:00",
+        "duration_ms": 2340,
+        "retries": 0,
+        "status": "success",
+        "compute_time_sec": 2.34,
+        "job_type": "cron"
+      },
+      {
+        "job_id": "ai_video_process",
+        "timestamp": "2025-08-16T14:25:30",
+        "duration_ms": 15200,
+        "retries": 1,
+        "status": "success",
+        "compute_time_sec": 22.8,
+        "job_type": "bursty"
+      }
+    ]
+  }
+}
