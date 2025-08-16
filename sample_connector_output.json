@@ -1,0 +1,51 @@
+{
+  "api_connector_generator_output": {
+    "description": "Auto-generated TypeScript connector for User Management API",
+    "api_name": "user_management",
+    "generated_files": {
+      "user_management_client.ts": {
+        "description": "Main TypeScript client class with type safety",
+        "features": ["Axios integration", "Error handling", "Type definitions"],
+        "preview": "class UserManagementClient {\n  private client: AxiosInstance;\n  \n  constructor(config: ClientConfig) {\n    this.client = axios.create({\n      baseURL: config.baseUrl,\n      headers: {\n        'Authorization': `Bearer ${config.apiKey}`,\n        'Content-Type': 'application/json'\n      }\n    });\n  }\n\n  async createUser(data: CreateUserRequest): Promise<CreateUserResponse> {\n    const url = `/users`;\n    const response = await this.client.post(url, data);\n    return response.data;\n  }\n}"
+      },
+      ".env.template": {
+        "description": "Environment configuration template",
+        "preview": "USER_MANAGEMENT_BASE_URL=https://api.internal.company.com/users\nUSER_MANAGEMENT_API_KEY=your_api_key_here\nUSER_MANAGEMENT_TIMEOUT=30000"
+      },
+      "README.md": {
+        "description": "Complete documentation with usage examples",
+        "sections": ["Installation", "Configuration", "API Endpoints", "Error Handling"]
+      },
+      "package.json": {
+        "description": "NPM package configuration",
+        "dependencies": ["axios", "typescript", "@types/node"]
+      }
+    },
+    "supported_endpoints": [
+      {
+        "method": "POST",
+        "path": "/users",
+        "name": "createUser",
+        "description": "Create a new user"
+      },
+      {
+        "method": "GET", 
+        "path": "/users",
+        "name": "listUsers",
+        "description": "List all users"
+      },
+      {
+        "method": "DELETE",
+        "path": "/users/{id}",
+        "name": "deleteUser", 
+        "description": "Delete a user by ID"
+      }
+    ],
+    "integration_ready": {
+      "trigger_dev": true,
+      "typescript": true,
+      "error_handling": true,
+      "authentication": "Bearer token"
+    }
+  }
+}
