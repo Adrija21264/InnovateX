@@ -1,5 +1,4 @@
-# 🚀 InnovateX – Enhancing Trigger.dev with Firebase/MongoDB Connectors & a Web Dashboard  
-
+# 🚀 InnovateX – Enhancing Trigger.dev with Firebase/MongoDB Connectors & a Web Dashboard   
 ## 📌 Overview  
 This project extends **Trigger.dev** by solving two major gaps developers face today:  
 
@@ -33,6 +32,7 @@ This makes adoption difficult in the **student/startup ecosystem**, where Fireba
   - **Firestore Document Added/Updated** (`onDocumentWrite`)  
 
 ---
+![Dashboard Screenshot](assets/api.png)
 
 ### 🛠️ Tech & Logic Used  
 - **Language:** TypeScript  
@@ -72,6 +72,7 @@ A **web-based dashboard** where developers & teams can:
 - 👥 **Team-Friendly** – PMs & Ops can interact without touching code.  
 
 ---
+![Dashboard Screenshot](assets/dashboard.png)
 
 ### 🛠️ Tech & Logic Used  
 - **Frontend:** React + TypeScript  
@@ -124,3 +125,7 @@ npm run server
 
 # Run frontend
 npm run client
+```
+## 🤝 Contributors  
+
+**Team SheCodess ✨**
