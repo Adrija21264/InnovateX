@@ -118,6 +118,8 @@ cd InnovateX
 npm install
 
 # Run backend
+
+
 npm run server
 
 # Run frontend
